@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guess the Number Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <section class="game-card">
+      <h1>Guess the Number</h1>
+      <p class="subtitle">Pick a difficulty and try to guess the secret number.</p>
+
+      <div class="settings">
+        <label for="playerName">Player Name</label>
+        <input type="text" id="playerName" placeholder="Enter your name" />
+
+        <label for="difficulty">Difficulty</label>
+        <select id="difficulty">
+          <option value="easy">Easy: 1-50</option>
+          <option value="medium" selected>Medium: 1-100</option>
+          <option value="hard">Hard: 1-200</option>
+          <option value="luck">Test Your Luck: 1-10</option>
+        </select>
+        </select>
+
+        <button id="startBtn">Start Game</button>
+      </div>
+
+      <div class="game-area">
+        <p id="rangeText">Choose a difficulty to begin.</p>
+        <p id="attemptsText">Attempts remaining: --</p>
+        <p id="scoreText">Score: 0</p>
+
+        <div class="guess-row">
+          <input type="number" id="guessInput" placeholder="Enter your guess" disabled />
+          <button id="guessBtn" disabled>Guess</button>
+        </div>
+
+        <div class="button-row">
+          <button id="hintBtn" disabled>Get Hint</button>
+          <button id="restartBtn">Restart</button>
+        </div>
+
+        <p id="feedbackText" class="feedback">Start the game to play!</p>
+      </div>
+    </section>
+
+    <section class="leaderboard-card">
+      <h2>Leaderboard</h2>
+      <ol id="leaderboardList">
+        <li>No scores yet.</li>
+      </ol>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
